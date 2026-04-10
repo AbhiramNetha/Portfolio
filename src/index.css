@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ─── THEME VARIABLES ──────────────────────────────────────────────────────── */
+
+:root {
+    --bg-primary:       #000000;
+    --bg-secondary:     #111111;
+    --bg-card:          #111111;
+    --bg-card-hover:    #151515;
+    --text-primary:     #ffffff;
+    --text-secondary:   #f0f0f0;
+    --text-muted:       #9ca3af; /* gray-400 */
+    --text-faint:       #6b7280; /* gray-500 */
+    --border-color:     #1f2937; /* gray-800 */
+    --border-faint:     rgba(255,255,255,0.08);
+    --selection-bg:     #ffffff;
+    --selection-text:   #000000;
+    --shadow-color:     rgba(0, 0, 0, 0.8);
+}
+
+/* ─── BASE STYLES ───────────────────────────────────────────────────────────── */
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        overflow-x: hidden;
+    }
+
+    ::selection {
+        background-color: var(--selection-bg);
+        color: var(--selection-text);
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
